@@ -1,0 +1,123 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+ {% block stylesheets %}
+     {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    <div class="container text-center">
+        <br> <br>
+        <h1 style="color:#ce8483"> Pas de diplome ? </h1>
+        <h2 class="thin" style="color: #3276b1">Trouvez votre formation a distance </h2>
+        <p class="text-muted"> <h4 style="color: #1c606a"> Tout le monde n’a pas réussi
+            à trouver sa place dans le système scolaire classique,
+            mais ce qui a pu être vu comme un échec aux yeux de certains n’est pas une fatalité.
+            Il est possible de trouver une formation sans diplôme,
+            dans un secteur qui vous plait.</h4> </p>
+    </div>
+    <!-- /Intro-->
+
+    <!-- Highlights - jumbotron -->
+    <div class="jumbotron top-space">
+        <div class="container" style=" background: transparent">
+
+            <h2 class="text-center thin" style="color: #be2617 ; font-family: 'Arial Narrow' ; font-style: italic "> Nos Formations </h2>
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6 highlight">
+                    <div class="h-caption"><h4><img src="{{ asset('assets/images/web-designer.jpg') }}" alt="Flowers in Chania"></i>Web-Design</h4></div>
+                    <div class="h-body text-center">
+                        <p>Le web design correspond à l’interface web et comprend l’architecture interactionnelle, l’organisation des pages, l’arborescence et la navigation d’un site web. Le webdesigner conçoit tout l’aspect graphique du site en respectant les désirs du client, les impératifs de marketing et de communication et le public visé.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 highlight">
+                    <div class="h-caption"><h4><img src="{{ asset('assets/images/Ia.jpeg') }}"></i>Intelligence-Artificielle</h4></div>
+                    <div class="h-body text-center">
+                        <p> L’IA désigne la possibilité pour une machine de reproduire des comportements liés aux humains, tels que le raisonnement, la planification et la créativité. </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 highlight">
+                    <div class="h-caption"><h4><img src="{{ asset('assets/images/Data.jpg') }}"></i>Data-Science</h4></div>
+                    <div class="h-body text-center">
+                        <p>Un Data Scientist doit impérativement maîtriser les fondamentaux de la science des données. ... L'expert doit pouvoir différencier le Machine Learning et le Deep Learning, et distinguer la Data Science de l'analyse métier et de l'ingénierie des données. Il doit aussi connaître les outils les plus couramment utilisés</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 highlight">
+                    <div class="h-caption"><h4><img src="{{ asset('assets/images/Securite.jpg') }}"></i> Sécurité-Réseaux</h4></div>
+                    <div class="h-body text-center">
+                        <p>Sécurité dans les réseaux. Comme des informations confidentielles circulent dans les réseaux, la sécurité des communications est devenue une préoccupation importante des utilisateurs et des entreprises? </p>
+                    </div>
+                </div>
+            </div> <!-- /row  -->
+
+        </div>
+    </div>
+    <!-- /Highlights -->
+
+    <!-- container -->
+    <div class="container">
+
+        <h1 class="text-center top-space" style="color: #e4b9c0">Découvrir notre école de formation à distance</h1>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-6" style="background:#dce3f9" >
+                <h2 > Se former avec Educatel</h2>
+                <p>Educatel, membre du groupe Skill and You, est l'école de référence de la formation à distance, avec plus d'1 million d'élèves formés depuis sa création en 1958 et plus de 3500 professionnels formés chaque année. Acteur historique des cours par correspondance et de la formation en ligne, nous proposons de nombreuses formations professionnelles. Que vous souhaitiez vous préparer à un métier, un diplôme ou à un concours de la Fonction publique, Educatel vous offre tous les outils pour réussir</p>
+                <img src="{{ asset('assets/images/evaluation.png') }}"></i>
+                <p  style="background:#dce3f9 ; color: #dce3f9">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+            </div>
+            <div class="col-sm-6">
+                <p>-----------------------------------------------------------------------------------------------------------------------</p>
+                <img src="{{ asset('assets/images/info.png') }}"></i>
+
+
+            </div>
+        </div> <!-- /row -->
+
+        <div class="row">
+            <div class="col-sm-6" , style="width: 100%;height: 100% ">
+                <p>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+
+             <h1 style="color: #3276b1;font-family:Open sans, helvetica, arial; padding-left: 190px">J'ai choisi... J'ai réussi... Je suis embauché !</h1>
+                <p> <h1 style="color:blue ; padding-left: 190px"> Pourquoi je choisi LEADERS UNIVERSITY? </h1>  </p>
+
+            </div>
+
+        </div> <!-- /row -->
+
+        <div class="jumbotron top-space" style="background:#ce8483">
+           <h3 style="color: white" > Choisissez Leaders University qui croit en vous, qui vous donne le plus et qui mise sur la technologie, le digital, la qualité et l’innovation.
+                13 Diplômes en Business & Informatique
+                Des partenariats en Tunisie et à l’étranger
+                85% Des diplômés sont embauchés dans l’année
+                Des Stages garantis en Tunisie & à l’étranger
+                Des masters Pro adaptés : Cours du soir & Week-ends
+                Devenez Expert Comptable, Analyste Financier, Data Analyste, Expert Cyber Security, Responsable Management Qualité, Digital Marketer, Licencié en Comptabilité et en Finance, Licencié en Informatique de Gestion et Licencié en Informatique.
+
+            </h3>
+
+        </div>
+
+    </div>	<!-- /container -->
+
+    <!-- Social links. @TODO: replace by link/instructions in template -->
+    <section id="social">
+        <div class="container">
+            <div class="wrapper clearfix">
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style">
+                    <a class="addthis_button_facebook_like" fb="button_count"></a>
+                    <a class="addthis_button_tweet"></a>
+                    <a class="addthis_button_linkedin_counter"></a>
+                    <a class="addthis_button_google_plusone" g="medium"></a>
+                </div>
+                <!-- AddThis Button END -->
+            </div>
+        </div>
+    </section>
+{% endblock %}
