@@ -38,12 +38,12 @@ class User1 implements UserInterface, PasswordAuthenticatedUserInterface
     private $password;
 
     /**
-     * @ORM\Column(type="string", length=255 , nullable=true)
+     * @ORM\Column(type="string", length=255 )
      */
     private $lastname;
 
     /**
-     * @ORM\Column(type="string", length=255 , nullable=true)
+     * @ORM\Column(type="string", length=255 )
      */
     private $firstname;
 
