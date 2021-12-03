@@ -2,7 +2,9 @@
 
 namespace App\Security;
 
+
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\Routing;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
@@ -46,12 +48,30 @@ class AppAuthAuthenticator extends AbstractLoginFormAuthenticator
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $firewallName): ?Response
     {
+
         if ($targetPath = $this->getTargetPath($request->getSession(), $firewallName)) {
             return new RedirectResponse($targetPath);
         }
+        $user = $token->getUser();
 
+        $roles = $user->getRoles();
+        $rolesTab = array_map(function ($role) {
+            return $role;
+        }, $roles);
 
-        return new RedirectResponse($this->urlGenerator->generate('user'));
+        if (in_array('ROLE_ADMIN', $rolesTab, true)) {
+            // c'est un aministrateur : on le rediriger vers l'espace admin
+            $redirection = new RedirectResponse($this->urlGenerator->generate('admin_home'));
+        } elseif (in_array('ROLE_FORM', $rolesTab, true)) {
+            // c'est un aministrateur : on le rediriger vers l'espace formateur
+            $redirection = new RedirectResponse($this->urlGenerator->generate(''));
+        } else {
+            // c'est un utilisaeur lambda : on le rediriger vers l'accueil
+            $redirection = new RedirectResponse($this->urlGenerator->generate('profil'));
+        }
+
+        return $redirection;
+        //return new RedirectResponse($this->urlGenerator->generate('profil'));
         //throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
 

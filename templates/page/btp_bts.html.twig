@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}master{% endblock %}
+ {% block stylesheets %}
+     {{ parent() }}
+ {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+<div style="color: transparent">
+    <p style="color: transparent"> -------------------</p>
+    <p style="color: transparent"> -------------------</p>
+    <p style="color: transparent"> -------------------</p>
+
+</div>
+<div class="container" >
+
+    <ol class="breadcrumb">
+        <li><a href="{{ path('index') }}">Home</a></li>
+        <li class="active">BTP/BTS</li>
+    </ol>
+
+    <h1 style="text-align: center;color: rgba(1,54,130,0.62) ;font-style : italic"> BTP/BTS</h1>
+    <br>
+    <p style=" border-bottom:4px solid rgba(1,54,130,0.2) ;padding-top: 40px"></p>
+</div>
+{% endblock %}

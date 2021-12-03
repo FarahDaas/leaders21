@@ -3,7 +3,20 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+    <div style="color: transparent">
+        <p style="color: transparent"> -------------------</p>
+        <p style="color: transparent"> -------------------</p>
+        <p style="color: transparent"> -------------------</p>
+
+    </div>
+    <div style="color: transparent">
+        <p style="color: transparent"> -------------------</p>
+        <p style="color: transparent"> -------------------</p>
+        <p style="color: transparent"> -------------------</p>
+
+    </div>
+    <div style="margin-left:35%">
+    <h1>SIGN UP</h1>
     {{ form_start(registrationForm) }}
     {{ form_row(registrationForm.firstname) }}
     {{ form_row(registrationForm.lastname) }}
@@ -17,4 +30,5 @@
 
         <button type="submit" class="btn">Register</button>
     {{ form_end(registrationForm) }}
+    </div>
 {% endblock %}

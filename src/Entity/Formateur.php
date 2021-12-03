@@ -40,6 +40,11 @@ class Formateur extends User1
      */
     private $classes;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $grade;
+
     public function __construct()
     {
         $this->condidats = new ArrayCollection();
@@ -109,6 +114,18 @@ class Formateur extends User1
     public function setClasses(Classe $classes): self
     {
         $this->classes = $classes;
+
+        return $this;
+    }
+
+    public function getGrade(): ?string
+    {
+        return $this->grade;
+    }
+
+    public function setGrade(string $grade): self
+    {
+        $this->grade = $grade;
 
         return $this;
     }
